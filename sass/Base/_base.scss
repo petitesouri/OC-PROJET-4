@@ -1,0 +1,18 @@
+body{  
+    font-family: $font-Text;
+}
+
+main{
+    background-color: $main-Background-Color;
+    box-sizing: border-box;
+    @include mixin-cote(100%,auto);
+    @include mixin-main-flex(center,center,0); 
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}

@@ -1,0 +1,106 @@
+.heart{
+    .empty-heart{
+        z-index: 5;
+        &:hover + .full-heart {
+            transform: scale(1,1); 
+        }
+    }
+    .full-heart{
+        font-size: 20px;
+        position: absolute;
+        bottom: -3px;
+        right: 0px;
+        background: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
+        background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color:transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform-origin: bottom;
+        transform: scale(0,0);
+        transition: transform 2000ms;
+    }
+}
+
+// Hover
+.menu__validation {
+    transition: all 450ms ease-in-out;
+}
+.menu-btn:hover .menu__txt--info,
+.menu-btn:hover .menu__txt--prix{
+    padding-right: 35px;
+    transition: all 450ms ease-in-out;
+}
+.menu-btn:hover .menu__validation {
+    transform: translate(-70px);
+}
+
+// entrée vignettes menu
+.menu-li--1 {    
+    animation: menu 375ms 1400ms linear backwards;    
+    .menu-btn {
+        animation: menu__item 550ms ease-in-out backwards;        
+        }
+        .menu-btn--1 {
+            animation-delay: 1400ms;            
+        }
+        .menu-btn--2 {
+            animation-delay: 1600ms;            
+        }
+        .menu-btn--3 {
+            animation-delay: 1800ms;            
+        }
+        .menu-btn--4 {
+            animation-delay: 1950ms;            
+        }
+    }
+
+    .menu-li--2 {   
+        animation: menu 325ms 1768ms linear backwards;    
+        .menu-btn {
+        animation: menu__item 375ms ease-in-out backwards;        
+        }
+        .menu-btn--1 {
+            animation-delay: 2092ms;            
+        }
+        .menu-btn--2 {
+            animation-delay: 2250ms;            
+        }
+        .menu-btn--3 {
+            animation-delay: 2400ms;            
+        }
+    }
+
+    .menu-li--3 {   
+        animation: menu 325ms 2033ms linear backwards;    
+        .menu-btn {
+        animation: menu__item 375ms ease-in-out backwards;        
+        }
+        .menu-btn--1 {
+            animation-delay: 2500ms;            
+        }
+        .menu-btn--2 {
+            animation-delay: 2650ms;            
+        }
+        .menu-btn--3 {
+            animation-delay: 2750ms;            
+        }
+    }
+  
+  @keyframes menu {
+    0% {
+        transform: translateX(-110%);
+    }
+    100% {
+        transform: translateX(0%);
+    }  
+  }
+  
+  @keyframes menu__item {
+    0% {
+        transform: translateX(-110%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+  }

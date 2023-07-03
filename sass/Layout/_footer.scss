@@ -1,0 +1,43 @@
+footer{
+    @include mixin-cote(100%,auto);
+    @include mixin-main-flex(center,flex-start,1rem);
+    background-color: #353535;
+    box-sizing: border-box;
+    padding: 1.375rem 1.562rem;
+    @include desktop{
+        @include mixin-main-flex(flex-start,flex-end,4.375rem);
+        flex-direction: row-reverse;
+    }
+    ul{
+        @include mixin-main-flex(center,flex-start,5px);
+        padding-inline-start: 0;
+        margin: 0;
+        @include desktop{
+            flex-direction: row;
+            gap: 20px;
+        }
+        li{
+            a{
+                color: white;
+            }
+        }
+    }
+    .fa-utensils{
+        @include mixin-cote(auto,0.8125rem);
+        margin-right: 0.687rem;
+    }
+    .fa-handshake-angle{
+        scale: 0.78;
+        margin-right: 0.3rem;
+    }
+    >main-footer{
+        @include desktop{
+            @include mixin-cote(100%,auto);
+        }
+    }
+    &.restaurants-footer{
+        @include desktop{
+            @include mixin-cote(100%,200px);
+        }
+    }
+}

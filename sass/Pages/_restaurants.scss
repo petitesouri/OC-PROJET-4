@@ -1,0 +1,93 @@
+.restaurants{
+    .banner{
+        @include mixin-cote(100%,17.2rem);
+        @include desktop{
+            @include mixin-cote(100%,15.63rem);
+        }
+    }
+    section{
+        @include mixin-cote(100%,auto);
+        background-color: $second-Background-Color;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        position: relative;
+        top: -100px;
+        z-index: 1;
+        padding: 0 13px;
+        margin-bottom: -100px;
+        box-sizing: border-box;
+        @include desktop{
+            @include mixin-cote(73%,auto);
+            top: -90px;
+            @include mixin-main-flex(center,center,0);
+            padding-bottom: 30px;
+        }
+        @include tablet{
+            @include mixin-cote(87%,auto);
+            top: -90px;
+            @include mixin-main-flex(center,center,0);
+            padding-bottom: 30px;
+        }
+        .title{
+            @include mixin-cote(19.18rem,auto);
+            @include mixin-main-flex(space-between,center,10px);
+            flex-direction: row;
+            margin: 12px auto;
+            h1{
+                font-size: nth($font-Size,5);
+                font-family: $font-Title-Logo;
+                font-weight: nth($font-weight,2);
+                margin: 0;
+            }
+            .heart{
+                span{
+                    bottom: -10px;
+                }
+            }
+        }
+        .line{
+            @include mixin-cote(40px,3px);
+            background: $check-Color;
+            border: none;
+            margin: 0;
+            position: relative;
+        }
+        article{
+            @include mixin-main-flex(center,flex-start,12px);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            @include desktop{
+                @include mixin-cote(88%,auto);
+            }
+            @include tablet{
+                @include mixin-cote(88%,auto);
+            }
+            h2{
+                font-size: nth($font-Size,1);
+                font-weight: nth($font-weight,1);
+            }
+            .menu {
+                @include mixin-cote(100%,auto);
+                padding-inline-start: 0;
+                display:flex;
+                flex-direction: column;
+                .menu-btn .menu__txt--ingredient, .menu-btn h3 {
+                    @include mixin-overflow;
+                }
+            }            
+        }
+    }
+    form{
+        @include mixin-cote(100%,3.125rem);
+        @include mixin-main-flex(center,center,0);
+        padding: 35px 0;
+        @include desktop{
+            @include mixin-cote(73%,auto);
+            background-color: $second-Background-Color;
+        }
+        @include tablet{
+            @include mixin-cote(87%,auto);
+            background-color: $second-Background-Color;
+        }
+    }
+}

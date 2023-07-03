@@ -1,0 +1,95 @@
+/* Général */
+
+@mixin mixin-cote($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin mixin-main-flex($justify,$align-items,$gap){
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align-items;
+    gap:$gap;
+}
+
+@mixin mixin-font-txt-btn{
+    font-size: nth($font-Size,1);
+    font-family: $font-Text;
+    font-weight: nth($font-weight,3);
+}
+
+/* Cards */ 
+
+@mixin mixin-txt-card-disposition{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin mixin-card-sticker{  
+    @include mixin-cote(80px,auto); 
+    font-size: 0.875rem; 
+    color: #008766;
+    text-align: center;
+    background-color: #99E2D0;
+    border-radius: 2px;    
+}
+@mixin menu__open-accent($dur, $delay) {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f4f9f8;
+    transform-origin: top left;
+    animation: menu $dur $delay both;
+    z-index: -1;
+}
+@mixin mixin-overflow{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Loader*/
+
+@mixin mixin-triangle-form{
+    @include mixin-cote(0,0);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+@mixin mixin-triangle-form-up($color){
+    border-color:$color;
+    border-bottom: 100px solid $color;
+}
+@mixin mixin-triangle-form-down($color){
+    border-color:$color;
+    border-top: 100px solid $color;
+}
+@mixin mixin-position-skew-triangle{
+    position:absolute;
+    transform:skewX(25deg);    
+}
+@mixin mixin-animation-triangle($name){
+animation:$name 3s linear;
+animation-iteration-count: 5;
+
+}
+@mixin mixin-keyframes-animation-triangle($deg,$opacity){
+transform:rotateY($deg);
+opacity:$opacity;
+}
+
+/* Responsive */
+
+@mixin desktop{
+    @media screen and (min-width: map-get($map: $breakpoints, $key:desktop)){
+        @content;     
+    }
+}
+@mixin tablet{
+    @media screen and (min-width: map-get($map: $breakpoints, $key:tablet-min)) and (max-width: map-get($map: $breakpoints, $key:tablet-max)){
+        @content;     
+    }
+}

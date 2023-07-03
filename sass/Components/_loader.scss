@@ -1,0 +1,110 @@
+.loader{
+    @include mixin-cote(100%,100vh);
+    background:$second-Background-Color;
+    position: fixed;
+    display:flex;
+    justify-content: center;
+    padding-top: 250px;
+    z-index:-20; 
+    .triangle-up-1,.triangle-up-4{
+        @include mixin-triangle-form-up($primary-Color);
+        @include mixin-triangle-form; 
+    }    
+    .triangle-down-1,.triangle-down-4{            
+        @include mixin-triangle-form-down($primary-Color);
+        @include mixin-triangle-form;
+    }        
+    .triangle-up-2,.triangle-up-5{  
+        @include mixin-triangle-form-up($second-Color);
+        @include mixin-triangle-form;          
+    }    
+    .triangle-down-2,.triangle-down-5{   
+        @include mixin-triangle-form-down($second-Color);
+        @include mixin-triangle-form;         
+    }   
+    .triangle-up-3{  
+        @include mixin-triangle-form-up($thirth-Color);
+        @include mixin-triangle-form;
+    }    
+    .triangle-down-3{ 
+        @include mixin-triangle-form-down($thirth-Color);
+        @include mixin-triangle-form;
+    }             
+}
+
+.loader{
+  opacity:0;
+  animation:loader 3s linear;
+  .triangle-1,.triangle-2,.triangle-3,.triangle-4,.triangle-5{
+    @include mixin-position-skew-triangle;
+  }
+  .triangle-1{
+    @include mixin-animation-triangle(animation-1);
+  }
+  .triangle-2{
+    @include mixin-animation-triangle(animation-2);
+  }
+  .triangle-3{
+    @include mixin-animation-triangle(animation-3);
+  }
+  .triangle-4{
+    @include mixin-animation-triangle(animation-4);
+  }
+  .triangle-5{
+    @include mixin-animation-triangle(animation-5);
+  }
+}
+
+@keyframes loader{
+  0%{
+      opacity:1;
+      z-index: 30;
+  }
+  99%{
+      opacity:1;
+  }
+  100%{
+      opacity:0;
+      z-index:-20;
+  }
+}  
+@keyframes animation-1{
+  0%{
+    @include mixin-keyframes-animation-triangle(0deg,1);    
+  }
+  100%{
+    @include mixin-keyframes-animation-triangle(180deg,0.6);    
+  }
+}  
+@keyframes animation-2{
+  0%{
+    @include mixin-keyframes-animation-triangle(20deg,1);
+  }
+  100%{
+    @include mixin-keyframes-animation-triangle(200deg,0.5);
+  }
+}  
+@keyframes animation-3{
+  0%{
+    @include mixin-keyframes-animation-triangle(40deg,1);
+  }
+  100%{
+    @include mixin-keyframes-animation-triangle(220deg,0.4);
+  }
+}  
+@keyframes animation-4{
+  0%{
+    @include mixin-keyframes-animation-triangle(60deg,1);
+  }
+  100%{
+    @include mixin-keyframes-animation-triangle(240deg,0.3);
+  }
+}  
+@keyframes animation-5{
+  0%{
+    @include mixin-keyframes-animation-triangle(80deg,1);
+  }
+  100%{
+    @include mixin-keyframes-animation-triangle(260deg,0.2);
+  }
+}

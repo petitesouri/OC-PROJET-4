@@ -1,0 +1,17 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:./assets/css/fichier.css",
+    "prefix":"postcss ./assets/css/fichier.css --use autoprefixer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petitesouri/Openclassrooms-Project-4.git"
+  },
+  "author": "Virginie RUDOWSKI",
+  "license": "ISC",
+  "browserslist":"last 4 versions"
+}

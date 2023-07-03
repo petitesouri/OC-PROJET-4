@@ -1,0 +1,26 @@
+figure{
+    @include mixin-cote(auto,15.69rem);
+    background-color: $main-Background-Color;
+    border-radius: 15px;
+    >img{
+        @include mixin-cote(100%,75%);        
+        object-fit: cover; 
+    }
+    figcaption{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 20px 8px 13px;
+        .figure__figcaption--txt{      
+            p{
+                font-size: nth($font-Size,2);   
+            }
+        }
+    }
+    .btn-heart{
+        .fa-regular{
+            position: relative;
+            left: 1.625rem;
+        }
+    }
+}

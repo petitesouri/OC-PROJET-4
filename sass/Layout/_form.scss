@@ -1,0 +1,21 @@
+.section-Nav{
+    @include mixin-cote(100%,50px);
+    @include mixin-main-flex(center,center,0);
+    background-color: #EAEAEA;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    &__form{
+        display: grid;
+        grid-template-columns: 12px auto;
+        padding-left: 1rem;
+        gap: 1.8rem;
+        input{
+            background-color: #EAEAEA;
+        }
+    }
+    @include desktop{
+        box-shadow: none;
+    }
+    @include tablet{
+        box-shadow: none;
+    }
+}
