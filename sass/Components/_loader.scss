@@ -31,7 +31,6 @@
         @include mixin-triangle-form;
     }             
 }
-
 .loader{
   opacity:0;
   animation:loader 3s linear;
@@ -61,11 +60,11 @@
       z-index: 30;
   }
   99%{
-      opacity:1;
+      opacity:0.9;
   }
   100%{
       opacity:0;
-      z-index:-20;
+      z-index:0;
   }
 }  
 @keyframes animation-1{

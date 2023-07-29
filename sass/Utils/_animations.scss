@@ -8,7 +8,7 @@
     .full-heart{
         font-size: 20px;
         position: absolute;
-        bottom: -3px;
+        bottom: -10px;
         right: 0px;
         background: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
         background-clip: text;
@@ -41,51 +41,51 @@
     .menu-btn {
         animation: menu__item 550ms ease-in-out backwards;        
         }
-        .menu-btn--1 {
-            animation-delay: 1400ms;            
-        }
-        .menu-btn--2 {
-            animation-delay: 1600ms;            
-        }
-        .menu-btn--3 {
-            animation-delay: 1800ms;            
-        }
-        .menu-btn--4 {
-            animation-delay: 1950ms;            
-        }
+    .menu-btn--1 {
+        animation-delay: 1400ms;            
     }
+    .menu-btn--2 {
+        animation-delay: 1600ms;            
+    }
+    .menu-btn--3 {
+        animation-delay: 1800ms;            
+    }
+    .menu-btn--4 {
+        animation-delay: 1950ms;            
+    }
+}
 
-    .menu-li--2 {   
-        animation: menu 325ms 1768ms linear backwards;    
-        .menu-btn {
+.menu-li--2 {   
+    animation: menu 325ms 1768ms linear backwards;    
+    .menu-btn {
         animation: menu__item 375ms ease-in-out backwards;        
-        }
-        .menu-btn--1 {
-            animation-delay: 2092ms;            
-        }
-        .menu-btn--2 {
-            animation-delay: 2250ms;            
-        }
-        .menu-btn--3 {
-            animation-delay: 2400ms;            
-        }
     }
+    .menu-btn--1 {
+        animation-delay: 2092ms;            
+    }
+    .menu-btn--2 {
+        animation-delay: 2250ms;            
+    }
+    .menu-btn--3 {
+        animation-delay: 2400ms;            
+    }
+}
 
-    .menu-li--3 {   
-        animation: menu 325ms 2033ms linear backwards;    
-        .menu-btn {
+.menu-li--3 {   
+    animation: menu 325ms 2033ms linear backwards;    
+    .menu-btn {
         animation: menu__item 375ms ease-in-out backwards;        
-        }
-        .menu-btn--1 {
-            animation-delay: 2500ms;            
-        }
-        .menu-btn--2 {
-            animation-delay: 2650ms;            
-        }
-        .menu-btn--3 {
-            animation-delay: 2750ms;            
-        }
     }
+    .menu-btn--1 {
+        animation-delay: 2500ms;            
+    }
+    .menu-btn--2 {
+        animation-delay: 2650ms;            
+    }
+    .menu-btn--3 {
+        animation-delay: 2750ms;            
+    }
+}
   
   @keyframes menu {
     0% {

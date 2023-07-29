@@ -1,71 +1,61 @@
+// Général
+body,label,input,select,textarea,ul{  
+    font-family: $font-Text;
+}
 h1,h2{
     font-size: nth($font-Size,4); 
 }
-
 p,h3{
     font-size: nth($font-Size,3);
-}
-
-body,p,h2,h3,figure,menu{
-    color: black;
     margin: 0;
 }
-
-input{
-    font-family: $font-Text;
+input,ul{
     font-size: nth($font-Size,1);
 }
-
-placeholder{
-    font-weight:nth($font-weight,3);
-}
-
 input,.section-Explication__list--grey-btn{
     border: none;
 }
 
+// Footer
 footer{
+    h2, .footer__list--txt-normal {
+        font-weight: 400;
+    }
     h2{
         color: white;
         font-size: nth($font-Size,2);
         font-family: $font-Title-Logo;
-        font-weight: nth($font-weight,2);
-        margin: 0;
         }
-    ul{
-        font-family: $font-Text;
-        font-size: nth($font-Size,1);
-    }
     .footer__list--txt-bold{
-        font-weight: nth($font-weight,3);
+        font-weight: 500;
       } 
-    .footer__list--txt-normal{
-    font-weight: nth($font-weight,2);
-    }
 }
 
+// icones
 .fa-solid{
     color: $icon-Color;
 }
-
 .fa-location-dot{
     @include mixin-cote(12px,auto);
     color:#353535;
 }
-
 .fa-heart{ 
     @include mixin-cote(22px,auto);               
 }
-
 .fa-circle-check{
     font-size: 1.25rem;
 }
-
 .fa-utensils,.fa-handshake-angle,.fa-circle-check{
     color: white;
 }
-
 .euro{
     font-size: 0.937rem;
-    font-weight: nth($font-weight,4);
+    font-weight: 700;
+}
+.fa-store {
+    color: $primary-Color;
+}
+.fa-arrow-left{
+    color: black;
+    font-size: nth($font-Size,2);
 }

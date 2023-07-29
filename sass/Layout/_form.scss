@@ -1,15 +1,15 @@
-.section-Nav{
-    @include mixin-cote(100%,50px);
+.homepage .section-Nav{
+    height: 50px;
     @include mixin-main-flex(center,center,0);
-    background-color: #EAEAEA;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    background-color: $thirth-Background-Color;
+    box-shadow: $shadow-header;
     &__form{
-        display: grid;
-        grid-template-columns: 12px auto;
-        padding-left: 1rem;
-        gap: 1.8rem;
-        input{
-            background-color: #EAEAEA;
+        background-color: $thirth-Background-Color;
+        @include mixin-main-flex(center,center,0);
+        flex-direction: row;
+        input,i,label{
+            background-color: $thirth-Background-Color;
+            text-align: center;
         }
     }
     @include desktop{

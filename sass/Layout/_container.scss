@@ -1,140 +1,114 @@
 .homepage{  
-    section{
-        &.section-Nav{
-            @include mixin-cote(100%,50px);
-            @include mixin-main-flex(center,center,0);
-            background-color:$thirth-Background-Color;
-            box-shadow:$shadow-header;
-        }
-        &.section-Search{
-            @include mixin-cote(100%,auto);
-            text-align: center;
-            background-color:$second-Background-Color;
-            padding-bottom: 3.562rem;
-            @include mixin-main-flex(center,center,1.687rem);
+    .section-Search{  
+        background-color: $second-Background-Color;        
+        @include mixin-main-flex(center,center,27px);
+        padding-bottom: 57px;
+        padding-top: 39px;
+        .section-Search-Title{ 
+            @include mixin-main-flex(center,center,30px);            
             h1{
                 @include mixin-cote(75%,auto);
-                margin: 2.46rem auto 1.87rem auto;
-            } 
-        }
-        &.section-Explication{
-            @include mixin-cote(100%, auto);
-            @include mixin-main-flex(center,flex-start,1.625rem);
-            margin: 3rem auto 4.25rem auto;
-            @include desktop{
-                @include mixin-cote(72.6%,auto);
-                margin: 3rem 0 4.25rem 0;
+                text-align: center;
             }
-            @include tablet{
-                @include mixin-cote(80%,auto);
+            p{
+                text-align: center;
             }
-            h2{
-                margin-left: 0.75rem;
-                @include desktop{
-                    margin-left: 0;
-                }
-            }
-            .section-Explication__list{
-                @include mixin-cote(100%,auto);
-                padding: 0 20px;
-                box-sizing: border-box;
-                @include tablet{
-                    @include mixin-main-flex(center,center,0);
-                    padding-left: 50px;
-                }                  
-                ol{ 
-                    @include mixin-main-flex(center,flex-start,20px);
-                    padding-inline-start: 5px;
-                    counter-reset: thumbs;   
-                    color: white;
-                    border-radius: 25px; 
-                    @include desktop{
-                        flex-direction: row;
-                    }
-                    @include tablet{
-                        @include mixin-cote(75%,auto);
-                    }          
-                    li{ 
-                        counter-increment: thumbs;
-                        position: relative; 
-                        @include mixin-cote(90%,auto);
-                        @include mixin-font-txt-btn; 
-                        color: black;
-                        background-color: $second-Background-Color;               
-                        border-radius: 20px;
-                        padding: 1.56rem 0 1.56rem 1.875rem;
-                        box-shadow: $shadow-grey-btn;
-                        &::before{
-                            content: counter(thumbs);
-                            background: $primary-Color;
-                            border-radius: 25px;
-                            color: white;
-                            padding: 0 5px;
-                            position: absolute;
-                            left:-10px;
-                        }
-                        .fa-solid{
-                            margin-right: 1.25rem;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.section-Restaurants{
-            @include mixin-cote(100%,auto);
-            @include mixin-main-flex(center,center,20px);
-            background-color:$second-Background-Color;
-            box-sizing: border-box;
-            padding-top: 3.375rem;
-            padding-bottom: 4.125rem;
-            h2{
-                align-self: flex-start;
-                padding-left: 1.25rem;
-                @include desktop{
-                    @include mixin-cote(72.6%,auto);
-                    align-self:center;
-                    padding-left: 0px;
-                }
-                @include tablet{
-                    @include mixin-cote(73%,auto);
-                    align-self:center;
-                }
-            }
-            .section-Restaurants__cards{
-                @include mixin-cote(90.8%,auto);
-                background-color: $second-Background-Color;
-                display: grid;
-                grid-template-rows: repeat(4,1fr);
-                row-gap: 1.25rem; 
-                img{
-                    border-top-right-radius: 15px;
-                    border-top-left-radius: 15px; 
-                }
-                @include desktop{
-                    @include mixin-cote(72.5%,auto);
-                    grid-template-columns: repeat(2,1fr);
-                    grid-template-rows: repeat(2,1fr);
-                    gap: 90px;
-                }
-                @include tablet{
-                    @include mixin-cote(73%,auto);
-                    grid-template-columns: repeat(2,1fr);
-                    grid-template-rows: repeat(2,1fr);
-                    gap: 90px;
-                }
-            }
-            a{  
-                position: relative;       
-                >span{
-                    @include mixin-card-sticker;
-                    box-shadow: $shadow-grey-btn;
-                    position: absolute;
-                    z-index: 1;
-                    right: 1.98rem;
-                    top: 1.45rem;
-                } 
-            }   
         }
     }
+    .section-Explication {        
+        @include mixin-main-flex(center,flex-start,25px);
+        margin: 50px 0;
+        padding: 0 20px;
+        @include desktop{
+            width: 82%;
+            margin: 50px auto;
+        }
+        .section-Explication__list {  
+            @include mixin-cote(100%,auto);
+            @include desktop{
+                margin: auto;
+            }      
+            ol {
+                @include mixin-main-flex(center,flex-start,26px);
+                padding-inline-start: 0;
+                @include desktop{
+                    flex-direction: row;
+                }
+                @include tablet{
+                    flex-direction: row;
+                }
+                li{
+                    @include mixin-cote(100%,72px);
+                    @include mixin-main-flex(flex-start,center,27px);
+                    flex-direction: row;
+                    background-color: $second-Background-Color;
+                    border-radius: 20px;                    
+                    padding-left: 2.125rem;
+                    position: relative;
+                    counter-increment: thumbs;
+                    @include desktop{
+                        gap: 1.187rem;
+                    }
+                    @include tablet{
+                        gap: .937rem;
+                    }
+                    &::before{
+                        content: counter(thumbs);
+                        background: $primary-Color;
+                        border-radius: 25px;
+                        color: white;
+                        padding: 0 5px;
+                        position: absolute;
+                        left: -10px;
+                    }
+                }
+            }
+        }
+    }
+    .section-Restaurants{
+        @include mixin-main-flex(center,flex-start,29px);
+        background-color:$second-Background-Color;
+        padding: 54px 11px 30px 17px;
+        h2{
+            padding-left: 5px;
+            @include desktop{
+                @include mixin-cote(82%,auto);
+                margin: auto;
+            }
+            @include tablet{
+                @include mixin-cote(82%,auto);
+                margin: auto;
+            }
+        }
+        .section-Restaurants__cards{
+            @include mixin-cote(98.5%,auto);
+            display: grid;
+            grid-template-rows: repeat(4,1fr);
+            row-gap: 18px; 
+            margin: auto;
+            @include desktop{
+                @include mixin-cote(82%,auto);
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(2,1fr);
+                gap: 90px;
+            }
+            @include tablet{
+                @include mixin-cote(82%,auto);
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(2,1fr);
+                gap: 90px;
+            }
+        }
+        a{  
+            position: relative;       
+            >span{
+                @include mixin-card-sticker;
+                box-shadow: $shadow-grey-btn;
+                position: absolute;
+                z-index: 1;
+                right: 1.98rem;
+                top: 1.45rem;
+            } 
+        }   
+    }   
 }

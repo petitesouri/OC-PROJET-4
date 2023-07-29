@@ -1,29 +1,16 @@
-.main-header{
-    @include mixin-cote(100%,3.94rem);  
-    @include mixin-main-flex(center,center,0); 
+header{
+    @include mixin-cote(100%,3.94rem);
     .header__logo{
-        @include mixin-cote(auto,2.75rem);
+        @include mixin-logo;
     }
-} 
-
+}
+.main-header{  
+    @include mixin-main-flex(center,center,0); 
+}
 .restaurants-header{
-    @include mixin-cote(auto,6rem);
     display: grid;
-    grid-template-columns: 0.1fr 1fr;
-    align-items: center;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
     a{
-        display: flex;
-        justify-content: center;
-        .header__logo{
-            @include mixin-cote(12.5rem,auto);
-            position: sticky;
-            margin-right: 13%;
-        }
-    }
-    .restaurants-header__nav{
-        .fa-arrow-left{
-            color: black;
-            font-size: nth($font-Size,2);
-        }
+        @include mixin-main-flex(center,center,0);
     }
 }

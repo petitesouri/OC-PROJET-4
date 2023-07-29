@@ -1,9 +1,16 @@
 .restaurants{
-    .banner{
-        @include mixin-cote(100%,17.2rem);
-        @include desktop{
-            @include mixin-cote(100%,15.63rem);
-        }
+    .banner {
+        margin: 0;
+        img{
+            @include mixin-cote(100%,16.8rem);
+            object-fit: cover;
+            @include desktop{
+                @include mixin-cote(100%,31.25rem);
+            }
+            @include tablet{
+                @include mixin-cote(100%,25rem);
+            }
+        }    
     }
     section{
         @include mixin-cote(100%,auto);
@@ -11,38 +18,33 @@
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
         position: relative;
-        top: -100px;
+        top: -50px;
         z-index: 1;
-        padding: 0 13px;
-        margin-bottom: -100px;
+        padding: 12px 13px 20px 13px;
+        margin-bottom: -50px;
         box-sizing: border-box;
         @include desktop{
-            @include mixin-cote(73%,auto);
-            top: -90px;
+            @include mixin-cote(73.3%,auto);
             @include mixin-main-flex(center,center,0);
             padding-bottom: 30px;
+            margin: 0 auto -50px auto;
         }
         @include tablet{
             @include mixin-cote(87%,auto);
-            top: -90px;
             @include mixin-main-flex(center,center,0);
             padding-bottom: 30px;
+            margin: 0 auto -50px auto;
         }
         .title{
             @include mixin-cote(19.18rem,auto);
             @include mixin-main-flex(space-between,center,10px);
             flex-direction: row;
-            margin: 12px auto;
+            margin: 22px auto;
             h1{
                 font-size: nth($font-Size,5);
                 font-family: $font-Title-Logo;
-                font-weight: nth($font-weight,2);
+                font-weight: 400;
                 margin: 0;
-            }
-            .heart{
-                span{
-                    bottom: -10px;
-                }
             }
         }
         .line{
@@ -57,37 +59,39 @@
             margin-top: 20px;
             margin-bottom: 20px;
             @include desktop{
-                @include mixin-cote(88%,auto);
+                @include mixin-cote(39.625rem,auto);
             }
             @include tablet{
-                @include mixin-cote(88%,auto);
+                @include mixin-cote(39.625rem,auto);
             }
             h2{
                 font-size: nth($font-Size,1);
-                font-weight: nth($font-weight,1);
+                font-weight: 300;
             }
             .menu {
                 @include mixin-cote(100%,auto);
                 padding-inline-start: 0;
-                display:flex;
-                flex-direction: column;
                 .menu-btn .menu__txt--ingredient, .menu-btn h3 {
                     @include mixin-overflow;
                 }
-            }            
+            }           
         }
     }
     form{
-        @include mixin-cote(100%,3.125rem);
+        background-color: $second-Background-Color;
         @include mixin-main-flex(center,center,0);
-        padding: 35px 0;
+        position: relative;
+        z-index: 2;
+        padding: 20px 0 35px 0;
         @include desktop{
             @include mixin-cote(73%,auto);
             background-color: $second-Background-Color;
+            margin: auto;
         }
         @include tablet{
             @include mixin-cote(87%,auto);
             background-color: $second-Background-Color;
+            margin: auto;
         }
     }
 }

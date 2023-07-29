@@ -1,18 +1,17 @@
-body{  
-    font-family: $font-Text;
-}
-
-main{
-    background-color: $main-Background-Color;
+* {
+    color: black;
     box-sizing: border-box;
-    @include mixin-cote(100%,auto);
-    @include mixin-main-flex(center,center,0); 
 }
-
+body,label,input,select,textarea,h1,h2,p{  
+    padding: 0;
+    margin: 0;
+}
+main,header,footer,.section-Nav,.section-Search,.section-Search-Title,.section-Explication,.section-Restaurants,input,select{
+    @include mixin-cote(100%,auto);
+}
 a{
     text-decoration: none;
 }
-
 li{
     list-style-type: none;
 }

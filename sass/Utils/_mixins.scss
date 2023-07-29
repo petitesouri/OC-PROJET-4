@@ -1,5 +1,4 @@
 /* Général */
-
 @mixin mixin-cote($width, $height){
     width: $width;
     height: $height;
@@ -11,21 +10,18 @@
     align-items: $align-items;
     gap:$gap;
 }
-
 @mixin mixin-font-txt-btn{
     font-size: nth($font-Size,1);
     font-family: $font-Text;
-    font-weight: nth($font-weight,3);
+    font-weight: 500;
 }
 
-/* Cards */ 
-
-@mixin mixin-txt-card-disposition{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+/* Logo */ 
+@mixin mixin-logo {
+    @include mixin-cote(10.125rem,2.25rem )
 }
+
+/* Cards */
 @mixin mixin-card-sticker{  
     @include mixin-cote(80px,auto); 
     font-size: 0.875rem; 
@@ -53,7 +49,6 @@
 }
 
 /* Loader*/
-
 @mixin mixin-triangle-form{
     @include mixin-cote(0,0);
     border-left: 50px solid transparent;
@@ -74,7 +69,6 @@
 @mixin mixin-animation-triangle($name){
 animation:$name 3s linear;
 animation-iteration-count: 5;
-
 }
 @mixin mixin-keyframes-animation-triangle($deg,$opacity){
 transform:rotateY($deg);
@@ -82,14 +76,14 @@ opacity:$opacity;
 }
 
 /* Responsive */
-
 @mixin desktop{
     @media screen and (min-width: map-get($map: $breakpoints, $key:desktop)){
         @content;     
     }
 }
 @mixin tablet{
-    @media screen and (min-width: map-get($map: $breakpoints, $key:tablet-min)) and (max-width: map-get($map: $breakpoints, $key:tablet-max)){
+    @media screen and (min-width: map-get($map: $breakpoints, $key:tablet-min)) 
+    and (max-width: map-get($map: $breakpoints, $key:tablet-max)){
         @content;     
     }
 }

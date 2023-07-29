@@ -10,52 +10,45 @@
     transition: all 450ms ease-in-out;
     &:hover{
         opacity: 0.8;
-        box-shadow:0px 8px 10px rgba(0, 0, 0, 0.25);
+        box-shadow: $shadow-purple-btn;
     }
 }
-
 .heart{
     position: relative;
     .empty-heart{
         font-size: 22px;
         position: absolute;
         right: 1px;
-        bottom: -5px;
+        bottom: -12px;
     }
 }
-
 .menu-btn {
-    display:flex;
     position:relative;
     cursor:pointer;
     margin:10px 0px;
     border-radius: 15px;
-    padding: 10px;
+    padding: 15px;
     width:auto;
     background-color: white;
     overflow: hidden;
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    animation: vignette 300ms backwards;
+    box-shadow: $shadow-white-btn;
     .menu__txt {
         @include mixin-cote(100%,auto);
         @include mixin-overflow;
-        display: flex;
-        flex-direction: column;
         transition: all 450ms ease-in-out;
-        .menu__txt h3 {
-            margin:0px 35px 5px 0px;
+        .menu__txt--info {            
+            @include mixin-main-flex(space-between,center,0);
+            flex-direction: row;
+            p{
+                font-size: nth($font-Size,1);
+            }
         }
-        .menu__txt--info {
-            display: flex;
-            justify-content: space-between;
-        }
-        .menu__txt--prix {
-            padding-left:10px;
+        .menu__txt--prix {            
             transition: all 450ms ease-in-out;
         }
     }
     .menu__validation {
-        @include mixin-cote(59px,69px);
+        @include mixin-cote(59px,71px);
         @include mixin-main-flex(center,center,0);
         position:absolute;
         right:-70px;

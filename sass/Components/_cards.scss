@@ -1,26 +1,26 @@
-figure{
-    @include mixin-cote(auto,15.69rem);
+.card{
+    @include mixin-cote(100%,15.69rem);
     background-color: $main-Background-Color;
     border-radius: 15px;
+    margin: 0;
     >img{
-        @include mixin-cote(100%,75%);        
+        @include mixin-cote(100%,69%);         
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
         object-fit: cover; 
     }
     figcaption{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 8px 20px 8px 13px;
-        .figure__figcaption--txt{      
+        padding: 16px 25px 12px 13px;
+        .figure__figcaption--txt{  
+            h3{
+                margin: 0 0 5px 0;
+            }    
             p{
                 font-size: nth($font-Size,2);   
             }
-        }
-    }
-    .btn-heart{
-        .fa-regular{
-            position: relative;
-            left: 1.625rem;
         }
     }
 }
